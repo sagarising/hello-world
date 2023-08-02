@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
   if (req.url.includes('/user')){
 	res.end(`Hello ${req.url.split('/').reverse()[0]}`)
   } else if (req.url.includes('/org')){
-	res.end(`Hello Word with love from ${req.url.split('/').reverse()[0]}`)
+	res.end(`Hello World with love from ${req.url.split('/').reverse()[0]}`)
   } else {
 	
   	res.end('Hello World');
