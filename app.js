@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/user/:username', (req, res) => {
+  res.send(`Hello ${req.params.username}!`)
+})
+
 app.listen(port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 })
