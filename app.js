@@ -15,6 +15,10 @@ app.get('/org/:orgname', (req, res) => {
   res.send(`Hello World with love from ${req.params.orgname}!`)
 })
 
+app.get('/user/:username/org/:orgname', (req, res) => {
+  res.send(`Hello ${req.params.username} with love from ${req.params.orgname}!`)
+})
+
 app.listen(port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 })
