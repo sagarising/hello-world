@@ -1,4 +1,4 @@
-# How to Run
+# How to Run server
 * Install node
 * Verify node version to > 20. Run to check  `node --version`
 * From project root run `npm install`
