@@ -1,5 +1,4 @@
-
-ipeline {
+pipeline {
     agent any
 
     stages {
@@ -10,7 +9,8 @@ ipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm version'
+		sh 'git clone git@github.com:sagarising/hello-world-test.git; cd hello-world-test;
+                sh 'npx cypress run'
             }
         }
         stage('Deploy') {
