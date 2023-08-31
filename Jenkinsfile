@@ -1,20 +1,21 @@
-pipeline {
+
+ipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Install Dependenices') {
             steps {
-                echo 'Building..'
+                echo 'npm install'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'npm version'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'terraform apply --auto-approve'
             }
         }
     }
